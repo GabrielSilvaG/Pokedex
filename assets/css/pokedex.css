@@ -1,0 +1,161 @@
+.pokemons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid; /* deixa com que criemos grades, parecido com colunas */
+    grid-template-columns: 1fr  /* Faz com que fica frações iguais  em colunas diferentes  */
+}
+
+.pokemon {
+    margin: .5rem;
+    padding: 2rem 1rem;
+    color: #ffff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pokemon .name {
+    color: #ffff;
+    margin-bottom: .25rem;
+    text-transform: capitalize; /* Transforma só a primeira letra em maiuscula */
+}
+
+.pokemon .number {
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-size: .625rem;
+}
+
+.pokemon .detalhes { /* Isso é a caixa entre a imagem do pokemon e os detalhes */ 
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centraliza tudo que estiver dentro */
+    justify-content: space-between; /* Da um espeço entre oque estiver dentro */ 
+}
+
+.pokemon .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centraliza tudo que estiver dentro */
+    justify-content: space-between; /* Da um espeço entre oque estiver dentro */ 
+}
+
+
+
+.pokemon .detalhes .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemon .detalhes .types .type {
+    color: #ffff;
+    padding: .35rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1); /* Caso tudo seja da mesma cor e queira destacar algo*/
+    text-align: center;
+}
+
+
+.pokemon .detalhes img {
+    max-width: 100%;
+    height: 80px;
+    align-self: flex-end;
+
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: .35rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #FFFF;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem
+}
+
+.statusWindow {
+    position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+
+
+
+.normal{
+    background-color:#a6a877;  }
+.grass{
+    background-color:#77c850;  }
+.fire{
+    background-color:#ee7f30;  }
+.water{
+    background-color:#678fee;  }
+.electric{
+    background-color:#f7cf2e;  }
+.ice{
+    background-color:#98d5d7;  }
+.ground{
+    background-color:#bfbf69;  }
+.flying{
+    background-color:#a98ff0;  }
+.poison{
+    background-color:#a040a0;  }
+.fighting{
+    background-color:#bf3029;  }
+.psychic{
+    background-color:#f65687;  }
+.dark{
+    background-color:#725847;  }
+.rock{
+    background-color:#b8a137;  }
+.bug{
+    background-color:#a8b720;  }
+.ghost{
+    background-color:#6e5896;  }
+.steel{
+    background-color:#b9b7cf;  }
+.dragon{
+    background-color:#6f38f6;  }
+.fairy{
+    background-color:#f9aec7;  }
+
+
+
+
+
+
+
+/* Essa é a configuração para cada tamanho, porem essa configuração é para a minha lista de pokemons */
+@media screen and (min-width: 380px) { /* tamanho da tela celular P */  
+    .pokemons {
+        grid-template-columns: 1fr 1fr ;
+   }
+}
+@media screen and (min-width: 576px) { /* tamanho da tela celular M */  
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+@media screen and (min-width: 992px) { /* tamanho da tela tablet */  
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+}

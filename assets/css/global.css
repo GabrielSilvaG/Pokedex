@@ -1,0 +1,23 @@
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: #DADFEA;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    background-color: #ffff;
+}
+/* Essa configuração é para que o site fique responsivo para a grande maioria dos uduários, celular, tablets, monitores e etc */
+@media screen and (min-width: 992px) {
+   .content {
+    max-width: 992px;
+    height: auto;
+    margin: 1rem auto; /* O "auto" significa, o máximo para cada lado  <<  >> */
+    border-radius: 1rem; /* Arredonda as bordas */ 
+  }
+}
